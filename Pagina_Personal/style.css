@@ -1,0 +1,204 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, h2, h3, h4 {
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+}
+
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+
+.container-fluid {
+    padding: 20px;
+}
+
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    display: block;
+    margin: 10px auto;
+    object-fit: cover;
+}
+
+
+aside {
+    background-color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+
+h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    color: #34495e;
+}
+
+
+video {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+
+img[alt*="Icono"], img[alt*="imagen de estudiante"] {
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+
+figcaption {
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin-top: 5px;
+}
+
+.section-box1 {
+    background-image: url('./public/img/b4.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.section-box1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+
+.section-box1 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.section-box1 h2, 
+.section-box1 h3, 
+.section-box1 h4 {
+    color: #f1f1f1;
+}
+.section-box2 {
+    background-image: url('./public/img/bg3.jpg'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.section-box2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+
+.section-box2 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.section-box2 h2, 
+.section-box2 h3, 
+.section-box2 h4 {
+    color: #f1f1f1;
+}
+.section-box3 {
+    background-image: url('./public/img/bg2.jpg'); 
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.section-box3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 15px;
+}
+
+
+.section-box3 > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.section-box3 h2, 
+.section-box3 h3, 
+.section-box3 h4 {
+    color: #f1f1f1;
+}
