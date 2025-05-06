@@ -16,9 +16,8 @@
                 </div>
                 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-                      <li class="breadcrumb-item"><a href="#">Home</a></li>
-                      <li class="breadcrumb-item"><a href="#">Library</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Data</li>
+                      <li class="breadcrumb-item"><a href="./home.html">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Info-Personal</li>
                     </ol>
                   </nav>
             </div>
@@ -81,8 +80,9 @@
     
                 </div>
                 <div class="col-md-8 ">
-                    <h2> Información Personal:
-                    </h2>
+                  <section id="personal">
+                    <h2>Informacion personal</h2>
+                  </section>
                     <article>
                         <p>
                            Nombre: Alexander Toapanta <br>
@@ -122,9 +122,9 @@
         <br><br>
         <div class="container-mid section-box3">
             <div class="row">
-                <div class="col">
-                    <h2>Deportes Favoritos</h2>
-                </div>
+              <section id="deportes">
+                <h2>Deportes Favoritos</h2>
+              </section>
             </div>
         <br><br>       
         <div class="container-fluid">
@@ -169,7 +169,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col">
-                    <h2>Videojuegos Favoritos:</h2>
+                  <section id="Videojuegos">
+                    <h2>Videojuegos Favoritos</h2>
+                  </section>
                 </div>
             </div>
         <br><br>  
@@ -228,18 +230,24 @@
         
         <div class="container-fluid section-box5">
             <div class="row">
+              <div class="col-12">
+                <section id="metas">
+                  <h2>
+                    Metas, Planes a futuro,Filosofía
+                  </h2>
+                </section>
                 <div class="col-12 ">
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acordion_mision" aria-expanded="true" aria-controls="collapseOne">
-                              Mision
+                              Metas
                             </button>
                           </h2>
                           <div id="acordion_mision" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 <p>
-                                    La Universidad de las Fuerzas Armadas-ESPE forma personas en el campo científico y tecnológico bajo un marco de principios y valores; y, genera  conocimiento transferible para contribuir al progreso del país y Fuerzas Armadas, a través de la docencia, investigación y vinculación con la sociedad.
+                                    Graduarme da la universidad.
                                   </p>
                             </div>
                           </div>
@@ -247,28 +255,30 @@
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acordion_vision" aria-expanded="false" aria-controls="acordion_vision">
-                              Vision
+                              Planes a futuro
                             </button>
                           </h2>
                           <div id="acordion_vision" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                              
+                              <p>
+                                Viajar a Reino Unido, comprar una casa.
+                              </p>
                             </div>
                           </div>
                         </div>
                         <div class="accordion-item">
                           <h2 class="accordion-header">
                             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acordion_valores" aria-expanded="false" aria-controls="acordion_valores">
-                              Valores
+                              Filosofía
                             </button>
                           </h2>
                           <div id="acordion_valores" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                              <figure>
-                                <image src="./public/img/PrincipiosYValoresESPE.png">
+                                <image src="./public/img/fiodor.jpg">
                                 <figcaption>
                                     
-            
+                                  Imagen del filosofo Fiodor Dostoyevski
                                 </figcaption>
                              </figure>
                             </div>
@@ -277,9 +287,16 @@
                       </div>
                 </div>
                 <div class="row mt-5">
-                <div class="col-md-4 "></div>
+                  <div class="col-12">
+                    <section>
+                      <h2>
+                        Prueba de buttongruop, alert, button y modal
+                      </h2>
+                    </section>
+                  </div>
+                  <div class="col-md-4 "></div>
                 <div class="col-md-4 ">
-
+                  
     <div id="alerta1" class="alert alert-info alert-dismissible fade show d-none" role="alert">
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         El botón funciona correctamente
@@ -307,26 +324,27 @@
     </div>
                 </div>
                 <div class="col-md-4 ">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_misdatos">
-                        Ingresar mis datos personales
-                    </button>
-                    <div class="modal fade" id="modal_misdatos"data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modal_misdatosLabel" aria-hidden="true">
-                        <div class="modal-dialog" modal-dialog-scrollable>
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="modal_misdatosLabel">Completar datos</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              <h1>Hola mundo</h1>
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                              <button type="button" class="btn btn-primary">Guardar</button>
-                            </div>
-                          </div>
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_misdatos">
+                    Ingresar mis datos personales
+                  </button>
+                  
+                  <div class="modal fade" id="modal_misdatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Completar datos</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <h1>Hola mundo</h1>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
                         </div>
                       </div>
+                    </div>
+                  </div>
                 </div>
                 <div class="col-md-4 "></div>
                 <div class="col-md-4 "></div>
@@ -347,7 +365,7 @@
                     <div class="card" style="width: 85%;">
                     <img src="./public/img/gato.webp" class="card-img-top" alt="Imagen de gato">
                     <div class="card-body">
-                      <h5 class="card-title">Amnimales y la salud mental</h5>
+                      <h5 class="card-title">Animales y la salud mental</h5>
                       <p class="card-text">Se ha demostrado que la interacción con animales disminuye los niveles de cortisol (una hormona relacionada con el estrés) y disminuye la presión arterial. Otros estudios han descubierto que los animales pueden reducir la soledad, aumentar los sentimientos de apoyo social y mejorar su estado de ánimo.
                       </p>
                       <a href="https://salud.nih.gov/recursos-de-salud/nih-noticias-de-salud/el-poder-de-las-mascotas#:~:text=Se%20ha%20demostrado%20que%20la,mejorar%20su%20estado%20de%20ánimo." class="btn btn-primary">Aprende más aquí</a>
@@ -398,19 +416,42 @@
                         </div>
                       </div>
                 </div>
-                <div class="col-md-6"></div>
                 <div class="col-md-6 mt-5">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <section>
+                    <h2> Uso de dropdown </h2>
+                  </section>
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="width: 100%;">
                     Seleccione una seccion
                       </button>
-                      <ul class="dropdown-menu">
+                      <ul class="dropdown-menu" >
                         <li><a class="dropdown-item" href="#salud-mental">salud-mental</a></li>
                         <li><a class="dropdown-item" href="#curiosidad">Curiosidad </a></li>
                         <li><a class="dropdown-item" href="#redes">Redes</a></li>
+                        <li><a class="dropdown-item" href="#personal">Informacion Personal</a></li>
+                        <li><a class="dropdown-item" href="#deportes">Deportes Favoritos</a></li>
+                        <li><a class="dropdown-item" href="#videojuegos">Videojuegos favoritos</a></li>
                       </ul>
                     </div>
                 </div>
-                <div class="col-md-6"></div>
+                </div>
+
+                <div class="col-md-12 mt-5">
+                 <h5> <span class="badge text-bg-secondary bg-danger">Peliculas Favoritas</span></h5>
+                 <ul class="list-group list-group-flush">
+                  <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjC0eec6Y-NAxXZSTABHXgiOX4QFnoECEIQAQ&url=https%3A%2F%2Fwww.justwatch.com%2Fes%2Fguia%2Fpeliculas-saga-vhs-orden&usg=AOvVaw2Ydt-HZKkQr61zwCcTZRHZ&opi=89978449" class="list-group-item ">
+                    VHS
+                  </a>
+                  <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjyjZq36Y-NAxWegIQIHUkjHG4QFnoECDwQAQ&url=https%3A%2F%2Fwww.sensacine.com%2Fpeliculas%2Fpelicula-130296%2F&usg=AOvVaw1_iak56N4zwm_hmzhp4Kig&opi=89978449" class="list-group-item ">
+                    REC
+                  </a>
+                  <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjhv__K6Y-NAxU4TTABHU67LVIQFnoECGgQAQ&url=https%3A%2F%2Fwww.imdb.com%2Fes%2Ftitle%2Ftt5323662%2F&usg=AOvVaw3aGGXh8F6Jyi1AxB1cfDRG&opi=89978449" class="list-group-item ">
+                    Una voz silenciosa
+                  </a>
+                  <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjQtOHf6Y-NAxVARjABHTKKH4EQFnoECFcQAQ&url=https%3A%2F%2Fwww.sensacine.com%2Fpeliculas%2Fpelicula-54015%2F&usg=AOvVaw0A9KB7fQtKdnu3g5tqleQc&opi=89978449" class="list-group-item ">
+                    Silent hill
+                  </a>
+
+                </ul>
                 </div>
             </div>
         </div>

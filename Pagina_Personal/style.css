@@ -9,12 +9,21 @@ body {
 }
 
 
-h1, h2, h3, h4 {
+h1 {
     font-weight: 700;
-    color: #2c3e50;
+    color: #808080;
     text-align: center;
 }
+h2 {
+    font-weight: 700;
+    color: #ff0040;
+    
+}
 
+h1, h2, h3, h4 {
+    font-weight: 700;
+    text-align: center;
+}
 
 a {
     color: #2980b9;
@@ -89,8 +98,7 @@ figcaption {
 }
 
 .section-box1 {
-    background-image: url('./public/img/b4.jpeg'); 
-    background-size: cover;
+    background-image: url('./public/img/fondo1.webp'); 
     background-position: center;
     border-radius: 15px;
     padding: 25px;
@@ -100,7 +108,6 @@ figcaption {
     position: relative;
     overflow: hidden;
 }
-
 
 .section-box1::before {
     content: "";
@@ -206,7 +213,8 @@ figcaption {
     background-color: #121212;
 }
 .section-box5 {
-    background-image: url('./public/img/b4.jpeg'); 
+    background-image: url('./public/img/fondo4.jpg');
+    background-size: cover;
     background-position: center;
     border-radius: 15px;
     padding: 25px;
@@ -216,5 +224,64 @@ figcaption {
     position: relative;
     overflow: hidden;
 }
+.accordion-button{
+    background-color: #0d6efd;
+    color:white;
+    font-weight:bold;
+    transition: background-color 0.3s ease;
+}
+.accordion-body {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    font-size: 1rem;
+  }
+  .alert {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  .alert a {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .modal-content {
+    border-radius: 1rem;
+    border: 1px solid #dee2e6;
+  }
+  
+  .modal-header, .modal-footer {
+    background-color: #f1f1f1;
+  }
+  .btn-group-vertical .btn{
+    margin-bottom:0.5rem ;
+    font-weight:500 ;
+  }
+  .car{
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .card-img-top{
+    border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+    object-fit: cover;
+  }
+  #collapseWidthExample .card-body {
+    color: white;
+    font-weight: bold;
+  }
+  .carousel-inner img{
+    object-fit: cover;
+  height: 670px;
+  border-radius: 0.75rem;
+  }
+  
+  .carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
 
+  
 
