@@ -205,3 +205,16 @@ figcaption {
 .section-box4 {
     background-color: #121212;
 }
+.section-box5 {
+    background-image: url('./public/img/b4.jpeg'); 
+    background-position: center;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+
