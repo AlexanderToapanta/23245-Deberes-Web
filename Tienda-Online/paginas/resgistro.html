@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+</head>
+<body>
+     <div class="card shadow">
+        <div class="card-header">
+            Registrarse
+        </div>
+        <form onsubmit="return false;">
+            <div class="row">
+                <div class="col-md-2"><h4>
+                    Nombre
+                </h4></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-9"><div class="form-floating mb-3">
+                <input type="text" class="form-control" id="txt_Nombre" placeholder="Nombre" required>
+                <label for="txt_email">Nombre</label>
+            </div></div>
+               <div class="col-md-2">
+                <h4>Apellido</h4>
+
+               </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-9">
+                    <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="txt_apellido" placeholder="Apellido" required>
+                <label for="txt_email">Apellido</label>
+            </div>
+                </div>
+                <div class="col-md-2">
+                    <h4>
+                        Correo electrónico
+                    </h4>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-9"><div class="form-floating mb-3">
+                  <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="txt_email" placeholder="Correo electrónico" required>
+                <label for="txt_email">Correo electrónico</label>
+            </div></div>
+             <div class="col-md-2">
+                    <h4>
+                        Contraseña
+                    </h4>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-9"><div class="form-floating mb-3">
+                <input type="password" class="form-control" id="txt_password" placeholder="Contraseña" required>
+                <label for="txt_password">Contraseña</label>
+            </div></div>
+               
+            </div>
+            
+            
+           <div class="row">
+            <div class="col-md-2">
+                 <button class="btn btn-success" type="submit" onclick="guardarUsuario()">
+                Registrase
+            </button>
+            </div>
+        
+           </div>
+        </form>
+    </div>
+    <script src="../js/subir_datos.js"></script>
+</body>
+</html>
