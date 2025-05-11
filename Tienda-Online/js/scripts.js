@@ -1,14 +1,20 @@
+let sesionActiva = false;
 function agregarAlCarrito(boton) {
     const card = boton.closest(".card");
     const nombre = card.querySelector(".card-title, .fw-bolder").textContent.trim();
-    let precioTexto = card.querySelector(".card-text")?.textContent.trim() ||"";
-    let precio= precioTexto.replace("$"," ").trim();
+    let precioTexto = card.querySelector(".card-text")?.textContent.trim() || "";
+    let precio = precioTexto.replace("$", " ").trim();
     const imagen = card.querySelector("img").src;
     const producto = { nombre, precio, imagen };
     let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+  
     carrito.push(producto);
     localStorage.setItem("carrito", JSON.stringify(carrito));
     actualizarContadorCarrito();
+
+    
+    actualizarStock(card);
 }
 
 
@@ -22,7 +28,27 @@ function actualizarContadorCarrito() {
 
 document.addEventListener("DOMContentLoaded", actualizarContadorCarrito);
 
+function actualizarStock(card) {
+    const cantidadElemento = card.querySelector("#cantidad");
+    let cantidad = parseInt(cantidadElemento.textContent.trim());
 
+    if (cantidad > 0) {
+        cantidad -= 1;
+        cantidadElemento.textContent = cantidad.toString();
+
+        if (cantidad === 0) {
+            const boton = card.querySelector("a");
+            if (boton) {
+                boton.classList.add("disabled");
+                boton.onclick = null;
+            }
+        }
+        return true;
+    } else {
+        alert("No hay más stock disponible para este producto.");
+        return false;
+    }
+}
 document.addEventListener("DOMContentLoaded", function () {
     console.log("Cargando carrito...");
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
@@ -92,16 +118,48 @@ function eliminarDelCarrito(index) {
 
 function realizarPago() {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-    const total = carrito.reduce((acc, producto) => acc + parseFloat(producto.precio), 0); 
+    const total = carrito.reduce((acc, producto) => acc + parseFloat(producto.precio), 0);
 
     if (carrito.length > 0) {
-        if (confirm(`El total a pagar es $${total.toFixed(2)}. ¿Deseas finalizar el pago?`)) {
-            localStorage.removeItem("carrito"); 
-            alert("¡Gracias por tu compra!");
-            cargarCarrito(); 
-            actualizarContadorCarrito(); 
+        if (!sesionActiva) {
+            alert('Debe iniciar sesion para completar la compra');
+            cargarPaginas('Login');
+        } else {
+            if (confirm(`El total a pagar es $${total.toFixed(2)}. ¿Deseas finalizar el pago?`)) {
+                localStorage.removeItem("carrito");
+                alert("¡Gracias por tu compra!");
+                cargarCarrito();
+                actualizarContadorCarrito();
+            }
         }
     } else {
         alert("El carrito está vacío. No puedes realizar el pago.");
     }
+}
+
+function Login() {
+    let emailInput = document.getElementById('txt_email_login');
+    let passwordInput = document.getElementById('txt_password_login');
+    let email = emailInput.value;
+    let password = passwordInput.value;
+
+    if (email === "ajtoapanta6@espe.edu.ec" && password === "12346") {
+        sesionActiva = true;
+        document.getElementById('btn_Login').style.display = 'none';
+        document.getElementById('btn_usuario').style.display = 'inline-block';
+        alert('Inicio de sesión correcto');
+        cargarPaginas('index');
+    } else {
+        alert('Correo o contraseña erróneos');
+        emailInput.value = '';
+        passwordInput.value = '';
+        emailInput.focus();
+    }
+}
+
+function CerrarSesion(){
+    document.getElementById('btn_usuario').style.display='none';
+    document.getElementById('btn_Login').style.display='inline-block';
+    alert('Sesion cerrada correctamente');
+    cargarPaginas('index');
 }
