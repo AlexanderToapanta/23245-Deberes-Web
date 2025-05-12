@@ -8,12 +8,12 @@ app.use(express.json());
 
 const stockMetodos = new StockMetodos();
 
-// Ruta para obtener el stock (solo 'stock_prub')
+
 app.get("/stock", async (req, res) => {
   try {
-    const stock = await stockMetodos.cargarStock(); // Obtener solo 'stock_prub'
+    const stock = await stockMetodos.cargarStock(); 
     if (stock !== null) {
-      res.json({ stock_prub: stock }); // Devolver el valor de 'stock_prub'
+      res.json({ stock_prub: stock }); 
     } else {
       res.status(404).send("No se encontró el stock");
     }
@@ -22,7 +22,6 @@ app.get("/stock", async (req, res) => {
   }
 });
 
-// Ruta para guardar el stock
 app.post("/stock", async (req, res) => {
   try {
     const { stock_prub } = req.body;
