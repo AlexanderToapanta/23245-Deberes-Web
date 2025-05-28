@@ -1,0 +1,134 @@
+<div class="container-fluid section-box5">
+            <div class="row">
+              <div class="col-12">
+                <section id="metas">
+                  <h2>
+                    Metas, Planes a futuro,Filosofía
+                  </h2>
+                </section>
+                <div class="col-12 ">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acordion_mision" aria-expanded="true" aria-controls="collapseOne">
+                              Metas
+                            </button>
+                          </h2>
+                          <div id="acordion_mision" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <p>
+                                    Graduarme da la universidad.
+                                  </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acordion_vision" aria-expanded="false" aria-controls="acordion_vision">
+                              Planes a futuro
+                            </button>
+                          </h2>
+                          <div id="acordion_vision" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                              <p>
+                                Viajar a Reino Unido, comprar una casa.
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acordion_valores" aria-expanded="false" aria-controls="acordion_valores">
+                              Filosofía
+                            </button>
+                          </h2>
+                          <div id="acordion_valores" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                             <figure>
+                                <image src="./public/img/fiodor.jpg">
+                                <figcaption>
+                                    
+                                  Imagen del filosofo Fiodor Dostoyevski
+                                </figcaption>
+                             </figure>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="row mt-5">
+                  <div class="col-12">
+                    <section>
+                      <h2>
+                        Prueba de buttongruop, alert, button y modal
+                      </h2>
+                    </section>
+                  </div>
+                  <div class="col-md-4 "></div>
+                <div class="col-md-4 ">
+                  
+    <div id="alerta1" class="alert alert-info alert-dismissible fade show d-none" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        El botón funciona correctamente
+    </div>
+    <div id="alerta2" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        El siguiente link te llevará a twitch <a href="https://www.twitch.tv" class="alert-link">da click aquí</a>, si te quieres divertir.
+      </div>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+        <symbol id="check-circle-fill" viewBox="0 0 16 16">
+          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+        </symbol>
+      </svg>
+      
+      <div id="alerta3" class="alert alert-success d-flex align-items-center d-none" role="alert">
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>El icono funciona correctamente</div>
+      </div> 
+    <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+        <button type="button" class="btn btn-primary" onclick=" mostrarAlerta('alerta1') ">Prueba</button>
+        <button type="button" class="btn btn-primary" onclick=" mostrarAlerta('alerta2') ">Diversión</button>
+        <button type="button" class="btn btn-primary" onclick=" mostrarAlerta('alerta3') ">Icono</button>
+    </div>
+                </div>
+                <div class="col-md-4 ">
+                  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal_misdatos">
+                    Ingresar mis datos personales
+                  </button>
+                  
+                  <div class="modal fade" id="modal_misdatos" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-scrollable">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5">Completar datos</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                          <h1>Hola mundo</h1>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                          <button type="button" class="btn btn-primary" id="btnGuardar">Guardar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <div class="col-md-4 "></div>
+                <br><br><br>
+                
+       
+
+                
+            </div>
+        </div>

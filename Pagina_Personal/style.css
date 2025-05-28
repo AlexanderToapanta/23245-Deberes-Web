@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
     font-weight: 700;
-    color: #ff0040;
+    color: #808080;
     
 }
 
@@ -213,8 +213,8 @@ figcaption {
     background-color: #121212;
 }
 .section-box5 {
-    background-image: url('./public/img/fondo4.jpg');
-    background-size: cover;
+    background-image: url('./public/img/b4.jpeg');
+    
     background-position: center;
     border-radius: 15px;
     padding: 25px;
