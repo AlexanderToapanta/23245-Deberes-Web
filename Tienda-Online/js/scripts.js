@@ -245,7 +245,7 @@ function Login() {
     let email = emailInput.value;
     let password = passwordInput.value;
 
-    if (email === "alexandertopanata05@gmail.com" && password === "12346") {
+    if (email === "alexandertoapanata05@gmail.com" && password === "12346") {
     sesionActiva = true;
     document.getElementById('btn_Login').style.display = 'none';
     document.getElementById('btn_usuario').style.display = 'inline-block';

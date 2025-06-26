@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Condicionales</title>
+    <link rel="stylesheet" href="./public/lib/bootstrap-5.3.5-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+
+</head>
+<body >
+ 
+    <div class="contianer py-5">
+        <h1 class="text-center mb-4"> Formulario Interactivo</h1>
+        <form id="formulario" class="bg-white p-4 rounded shadow"
+      onsubmit="return validar(event)"
+      onreset="formReseteado(event)"
+      oninput="inputGeneral(event)"
+      onchange="cambioGeneral(event)">
+      <label>Texto corto:</label>
+      <input type="text" id="txt_texto" class="form-control" 
+             oninput="validarTexto(this)" onblur="desenfocarTexto(this)" 
+             onfocus="enfocarTexto(this)" onkeydown="teclaPresionada()" 
+             onkeyup="teclaLevantada()" onkeypress="teclaDigitada()">
+      <p id="mensaje_texto" class="mt-1"></p>
+      
+      <label class="mt-3">Correo electrónico:</label>
+      <input type="email" id="txt_email" class="form-control" 
+             oninput="validarEmail(this)" onblur="correoFinal(this)" onchange="correoCambiado(this)">
+      <p id="mensaje_email" class="mt-1"></p>
+
+        <label class="mt-3">Número:</label>
+      <input type="number" id="txt_num" class="form-control"
+             oninput="validarNumero(this)" onkeyup="evaluarNumero(this)" onchange="numeroCambiado(this)">
+      <p id="mensaje_num" class="mt-1"></p>
+
+      <label class="mt-3">Contraseña:</label>
+      <input type="password" id="txt_pass" class="form-control"
+             onkeypress="validarPassword(this)" onkeyup="claveLevantada(this)" onblur="ocultarClave(this)">
+      <p id="mensaje_pass" class="mt-1"></p>
+
+      <label class="mt-3">Fecha:</label>
+      <input type="date" id="fecha" class="form-control"
+             onchange="cambiarFecha(this)" onblur="fechaFuera(this)" onfocus="fechaEnfocada(this)">
+      <p id="mensaje_fecha" class="mt-1"></p>
+
+      <label class="mt-3">Archivo:</label>
+<input type="file" id="archivo" class="form-control"
+       onchange="archivoCambiado(this)" onclick="archivoClick()" onblur="archivoFuera(this)">
+<p id="mensaje_archivo"></p>
+
+<label class="mt-3">Nivel de interés:</label>
+<input type="range" id="rango" class="form-range" min="0" max="100"
+       oninput="mostrarRango(this)" onchange="rangoFinal(this)">
+<p id="mensaje_rango"></p>
+
+<label class="mt-3">Selecciona un color:</label>
+<input type="color" id="color" class="form-control form-control-color"
+       oninput="colorSeleccionado(this)" onchange="colorCambiado(this)">
+<p id="mensaje_color"></p>
+
+<label class="mt-3">Teléfono:</label>
+<input type="tel" id="telefono" class="form-control"
+       oninput="validarTelefono(this)" onkeyup="telefonoDigitado(this)">
+<p id="mensaje_tel"></p>
+
+<label class="mt-3">Sitio web:</label>
+<input type="url" id="url" class="form-control"
+       oninput="validarUrl(this)" onblur="urlFinal(this)">
+<p id="mensaje_url"></p>
+
+<label class="mt-3">Seleccione sus preferencias:</label><br>
+<input type="checkbox" id="chk_news" value="Noticias" onclick="checkboxCambiado()" onchange="checkboxCambiado()"> Noticias
+<input type="checkbox" id="chk_promos" value="Promos" onclick="checkboxCambiado()" onchange="checkboxCambiado()">
+<p id="mensaje_check"></p>
+
+<label class="mt-3">Sexo:</label><br>
+<input type="radio" name="sexo" value="M" onclick="radioCambiado()" onchange="radioCambiado()"> Mujer
+<input type="radio" name="sexo" value="H" onclick="radioCambiado()" onchange="radioCambiado()"> Hombre
+<p id="mensaje_radio"></p>
+
+<label class="mt-3">País:</label>
+<select id="pais" class="form-select"
+        onchange="paisCambiado(this)" onclick="selectClick()" onfocus="selectFoco(this)" onblur="selectFuera(this)">
+    <option value="">Seleccione</option>
+    <option value="Ecuador">Ecuador</option>
+    <option value="México">México</option>
+    <option value="Perú">Perú</option>
+</select>
+<p id="mensaje_select"></p>
+
+<label class="mt-3">Comentarios:</label>
+<textarea id="comentario" class="form-control"
+          oninput="textoLargo(this)" onkeyup="comentarioEscrito(this)"
+          onfocus="comentarioFoco(this)" onblur="comentarioFuera(this)"></textarea>
+<p id="mensaje_textarea"></p>
+
+<button type="submit" class="btn btn-info mt-3"
+        onclick="botonClick()" onmouseover="botonOver(this)" onmousedown="botonDown(this)" 
+        onmouseup="botonUp(this)" onfocus="botonFoco(this)">Click aquí</button>
+<p id="mensaje_boton"></p>
+
+<button type="reset" class="btn btn-danger mt-2">Restablecer</button>
+<p id="mensaje_reset"></p>
+        </form>
+    </div>
+    
+    
+<script src="./public/lib/bootstrap-5.3.5-dist/js/bootstrap.min.js"></script>
+<script src="./public/js/condicinones.js"></script>    
+</body>
+</html>
